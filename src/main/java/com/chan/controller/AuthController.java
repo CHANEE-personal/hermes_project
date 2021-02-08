@@ -3,10 +3,7 @@ package com.chan.controller;
 import java.util.List;
 
 import org.springframework.boot.autoconfigure.security.SecurityProperties.User;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.chan.common.UserInfo;
 import com.chan.dto.UserInfoDto;
@@ -31,7 +28,8 @@ public class AuthController {
 									  @ApiParam(value="비밀번호",required=true) @RequestParam String password) {
 		return userRepository.findAll();
 	}
-	
+
+	@CrossOrigin(origins="http://localhost:8080", maxAge=3600)
 	@ApiOperation(value="회원 등록", notes = "회원을 등록한다.")
 	@PostMapping(value="/signup")
 	public void save(UserInfoDto userInfoDto) {
