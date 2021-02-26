@@ -1,17 +1,20 @@
 package com.chan.controller;
 
+import com.chan.service.UserService;
+import lombok.RequiredArgsConstructor;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.chan.dto.UserInfoDto;
-import com.chan.service.UserService;
 
 @Controller
+@RequiredArgsConstructor
 public class loginController {
-	
-	private UserService userService;	
+
+	private final UserService userService;
 	
 	@GetMapping("/")
 	public String index() {
@@ -24,11 +27,11 @@ public class loginController {
 	}
 			
 	@PostMapping("/member/join")
-	public String showJoin(UserInfoDto userInfoDto) {				
-			
-		userService.joinUser(userInfoDto);
-		
-		return "redirect:/";
+	public void insertUserInfo(UserInfoDto userInfoDto) throws Exception{
+
+		BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+		userInfoDto.setPassword(passwordEncoder.encode(userInfoDto.getPassword()));
+		userService.insertUserInfo(userInfoDto);
 	}
 		
 	
