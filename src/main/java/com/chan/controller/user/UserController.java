@@ -1,16 +1,16 @@
-package com.chan.controller;
+package com.chan.controller.user;
 
 import com.chan.dto.UserInfoDto;
 import com.chan.service.UserService;
+import com.chan.common.StringUtil;
+import io.swagger.models.Model;
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
-
-@Slf4j
 @Controller
 @RequiredArgsConstructor
 @RequestMapping(value="/user")
@@ -42,32 +42,16 @@ public class UserController {
      * @modifyed :
      **/
     @PostMapping("/loginProcess")
-    public String loginProcess(@RequestParam(value="id") Long id,
-                               @RequestParam(value="password") String password) throws Exception {
-        System.out.println("===start loginProcess===");
-        System.out.println(id);
-        System.out.println(password);
-        if(userService.getUserCount(id, password) > 0) {
-            return "/index";
-        }else {
-            return "/index";
-        }
-    }
+    public ModelAndView loginProcess(@Param("id") String id, @Param("password") String password) throws Exception {
 
-    /**
-     * @package : com.chan.controller
-     * @method : join
-     * @comment : 회원가입 페이지
-     * @date : 2021-02-26 오후 3:38
-     * @author : chanee
-     * @version : 1.0.0
-     * @modifyed :
-     **/
-    @GetMapping("/join")
-    public ModelAndView join() throws Exception {
         ModelAndView mv = new ModelAndView();
-
-        mv.setViewName("/user/join");
+        if(StringUtil.getInt(userService.getUserCount(id, password)) > 0) {
+            mv.addObject("msg","로그인되었습니다.");
+            mv.setViewName("index");
+        }else {
+            mv.addObject("msg","존재하는 아이디가 없습니다");
+            mv.setViewName("index");
+        }
 
         return mv;
     }
@@ -82,10 +66,14 @@ public class UserController {
      * @modifyed :
      **/
     @PostMapping("/register")
-    public void insertUserInfo(UserInfoDto userInfoDto) throws Exception
+    public String insertUserInfo(UserInfoDto userInfoDto) throws Exception
     {
         BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
         userInfoDto.setPassword(passwordEncoder.encode(userInfoDto.getPassword()));
-        userService.insertUserInfo(userInfoDto);
+        if(StringUtil.getInt(userService.insertUserInfo(userInfoDto))>0) {
+            return "index";
+        }else {
+            return "index";
+        }
     }
 }

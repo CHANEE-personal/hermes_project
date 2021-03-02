@@ -7,6 +7,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 import java.util.Map;
 
@@ -52,9 +53,9 @@ public class UserServiceImpl implements UserService {
         return userMapper.getUserDetail(userInfoDto);
     }
 
-    public void insertUserInfo(UserInfoDto userInfoDto) throws Exception {
+    public Integer insertUserInfo(UserInfoDto userInfoDto) throws Exception {
 
-        userMapper.insertUserInfo(userInfoDto);
+        return userMapper.insertUserInfo(userInfoDto);
     }
 
     /**
@@ -66,11 +67,11 @@ public class UserServiceImpl implements UserService {
      * @version : 1.0.0
      * @modifyed :
      **/
-    public Integer getUserCount(Long id, String password) throws Exception {
-        BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
-        String bCrytPassword = passwordEncoder.encode(password);
+    public Integer getUserCount(String id, String password) throws Exception {
 
-        return userMapper.getUserCount(id, bCrytPassword);
+        BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();
+        String bCyptPassword = bCryptPasswordEncoder.encode(password);
+        return userMapper.getUserCount(id, bCyptPassword);
     }
 
 }

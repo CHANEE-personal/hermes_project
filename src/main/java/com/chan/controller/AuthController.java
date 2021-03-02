@@ -13,6 +13,7 @@ import com.chan.dto.UserInfoDto;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 
+import javax.transaction.Transactional;
 import java.util.List;
 import java.util.Map;
 
@@ -39,8 +40,6 @@ public class AuthController {
 	})
 	public Map<String, UserInfoDto> getUserDetail(UserInfoDto userInfoDto) throws Exception {
 
-		System.out.println("===getUserDetail===");
-		System.out.println(userService.getUserDetail(userInfoDto));
 		return userService.getUserDetail(userInfoDto);
 	}
 

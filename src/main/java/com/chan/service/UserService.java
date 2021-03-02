@@ -2,6 +2,7 @@ package com.chan.service;
 
 import com.chan.dto.UserInfoDto;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 import java.util.Map;
 
@@ -38,7 +39,7 @@ public interface UserService {
      * @version : 1.0.0
      * @modifyed :
      **/
-    public void insertUserInfo(UserInfoDto userInfoDto) throws Exception;
+    public Integer insertUserInfo(UserInfoDto userInfoDto) throws Exception;
 
     public Map<String, UserInfoDto> getUserDetail(UserInfoDto userInfoDto) throws Exception;
 
@@ -51,6 +52,6 @@ public interface UserService {
      * @version : 1.0.0
      * @modifyed :
      **/
-    public Integer getUserCount(Long id, String password) throws Exception;
+    public Integer getUserCount(String id, String password) throws Exception;
 
 }

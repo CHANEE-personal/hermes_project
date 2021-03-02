@@ -1,10 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
-
+<input type="text" th:value="${msg}" value="기본값"/>
 </body>
+<script type="text/JavaScript" src="http://code.jquery.com/jquery-1.7.min.js"></script>
+<script th:inline="javascript">
+    /* <![CDATA[*/
+    $(document).ready(function() {
+        var message = /*[[${msg}]]*/ 'default';
+       alert(message);
+    });
+    /*]]>*/
+</script>
 </html>

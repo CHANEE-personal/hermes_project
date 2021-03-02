@@ -13,6 +13,6 @@ public class WebConfiguration implements WebMvcConfigurer {
         .allowedOrigins("*")
         .allowedMethods("GET","POST","OPTIONS")
         .allowedHeaders("Content-Type", "Custom-Header")
-        .allowCredentials(false).maxAge(5);
+        .allowCredentials(false).maxAge(3000);
     }
 }

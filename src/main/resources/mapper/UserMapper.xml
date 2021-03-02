@@ -43,15 +43,15 @@
     <select id="getUserCheck" parameterType="hashMap" resultType="String">
         SELECT *
         FROM hermes_user
-        WHERE id = #{id},
+        WHERE id = #{id}
         AND password = #{password}
     </select>
 
     <!-- 회원 존재 유무 -->
-    <select id="getUserCount" parameterType="hashMap" resultType="Integer">
+    <select id="getUserCount" resultType="Integer">
         SELECT COUNT(*)
         FROM hermes_user
-        WHERE id = #{id},
+        WHERE id = #{id}
         AND password = #{password}
     </select>
 </mapper>
