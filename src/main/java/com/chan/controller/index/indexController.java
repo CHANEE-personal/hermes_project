@@ -1,5 +1,6 @@
 package com.chan.controller.index;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -11,6 +12,7 @@ import org.springframework.web.servlet.ModelAndView;
 * @version : 1.0.0
 * @modifyed :
 **/
+@Controller
 public class indexController {
 
     /**
@@ -22,8 +24,8 @@ public class indexController {
      * @version : 1.0.0
      * @modifyed :
      **/
-    @RequestMapping(value="/main")
+    @RequestMapping(value="/")
     public String hermes_main() throws Exception {
-        return "index";
+        return "user/login";
     }
 }
