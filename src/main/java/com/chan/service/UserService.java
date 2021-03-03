@@ -54,4 +54,25 @@ public interface UserService {
      **/
     public Integer getUserCount(String id, String password) throws Exception;
 
+    /**
+     * @package : com.chan.service
+     * @method : getUserIdCheck
+     * @comment : 회원 아이디 조회
+     * @date : 2021-03-03 오후 5:18
+     * @author : chanee
+     * @version : 1.0.0
+     * @modifyed :
+     **/
+    public Integer getUserIdCheck(String id) throws Exception;
+
+    /**
+     * @package : com.chan.service
+     * @method : getUserPassword
+     * @comment : 회원 비밀번호 조회
+     * @date : 2021-03-03 오후 5:02
+     * @author : chanee
+     * @version : 1.0.0
+     * @modifyed :
+     **/
+    public String getUserPassword(String id) throws Exception;
 }

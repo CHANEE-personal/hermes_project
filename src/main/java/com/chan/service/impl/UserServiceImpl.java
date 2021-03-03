@@ -74,4 +74,29 @@ public class UserServiceImpl implements UserService {
         return userMapper.getUserCount(id, bCyptPassword);
     }
 
+    /**
+     * @package : com.chan.service.impl
+     * @method : getUserIdCheck
+     * @comment : 회원 아이디 조회
+     * @date : 2021-03-03 오후 5:19
+     * @author : chanee
+     * @version : 1.0.0
+     * @modifyed :
+     **/
+    public Integer getUserIdCheck(String id) throws Exception {
+        return userMapper.getUserIdCheck(id);
+    }
+
+    /**
+     * @package : com.chan.service.impl
+     * @method : getUserPassword
+     * @comment : 회원 패스워드 조회
+     * @date : 2021-03-03 오후 5:03
+     * @author : chanee
+     * @version : 1.0.0
+     * @modifyed :
+     **/
+    public String getUserPassword(String id) throws Exception {
+        return userMapper.getUserPassword(id);
+    }
 }

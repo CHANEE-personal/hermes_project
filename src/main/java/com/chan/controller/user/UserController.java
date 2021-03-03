@@ -3,9 +3,7 @@ package com.chan.controller.user;
 import com.chan.dto.UserInfoDto;
 import com.chan.service.UserService;
 import com.chan.common.StringUtil;
-import io.swagger.models.Model;
 import lombok.RequiredArgsConstructor;
-import org.apache.ibatis.annotations.Param;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -42,20 +40,31 @@ public class UserController {
      * @modifyed :
      **/
     @PostMapping("/loginProcess")
-    public ModelAndView loginProcess(@Param("id") String id, @Param("password") String password) throws Exception {
+    public ModelAndView loginProcess(UserInfoDto userInfoDto) throws Exception {
 
+        BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();
         ModelAndView mv = new ModelAndView();
-        if(StringUtil.getInt(userService.getUserCount(id, password)) > 0) {
-            mv.addObject("msg","로그인되었습니다.");
-            mv.setViewName("index");
+
+        // 아이디 존재 유무
+        if(StringUtil.getInt(userService.getUserIdCheck(userInfoDto.getId())) > 0) {
+            // 패스워드 조회
+            String checkPw = userService.getUserPassword(userInfoDto.getId());
+            // 패스워드 체크
+            boolean matchPw = bCryptPasswordEncoder.matches(userInfoDto.getPassword(), checkPw);
+            if(matchPw) {
+                mv.addObject("msg","로그인되었습니다.");
+                mv.setViewName("index");
+            }else {
+                mv.addObject("msg","패스워드를 확인해주세요.");
+                mv.setViewName("index");
+            }
         }else {
-            mv.addObject("msg","존재하는 아이디가 없습니다");
+            mv.addObject("msg", "존재하는 아이디가 없습니다.");
             mv.setViewName("index");
         }
 
         return mv;
     }
-
     /**
      * @package : com.chan.controller
      * @method : insertUserInfo

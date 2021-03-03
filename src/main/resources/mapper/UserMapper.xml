@@ -52,6 +52,18 @@
         SELECT COUNT(*)
         FROM hermes_user
         WHERE id = #{id}
-        AND password = #{password}
+    </select>
+
+    <select id="getUserIdCheck" resultType="Integer">
+        SELECT COUNT(*)
+        FROM hermes_user
+        WHERE id = #{id}
+    </select>
+
+    <!-- 회원 패스워드 조회 -->
+    <select id="getUserPassword" resultType="String">
+        SELECT password
+        FROM hermes_user
+        WHERE id = #{id}
     </select>
 </mapper>

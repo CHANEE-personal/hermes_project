@@ -32,4 +32,26 @@ public interface UserMapper {
      * @modifyed :
      **/
     public Integer getUserCount(@Param("id") String id, @Param("password") String password) throws Exception;
+
+    /**
+     * @package : com.chan.mapper
+     * @method : getUserIdCheck
+     * @comment : 회원 아이디 조회
+     * @date : 2021-03-03 오후 5:19
+     * @author : chanee
+     * @version : 1.0.0
+     * @modifyed :
+     **/
+    public Integer getUserIdCheck(String id) throws Exception;
+
+    /**
+     * @package : com.chan.mapper
+     * @method : getUserPassword
+     * @comment : 회원 패스워드 조회
+     * @date : 2021-03-03 오후 5:04
+     * @author : chanee
+     * @version : 1.0.0
+     * @modifyed :
+     **/
+    public String getUserPassword(String id) throws Exception;
 }
