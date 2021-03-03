@@ -24,8 +24,8 @@ public class indexController {
      * @version : 1.0.0
      * @modifyed :
      **/
-    @RequestMapping(value="/")
-    public String hermes_main() throws Exception {
-        return "user/login";
-    }
+//    @RequestMapping(value="/")
+//    public String hermes_main() throws Exception {
+//        return "user/login";
+//    }
 }
