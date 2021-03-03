@@ -12,7 +12,11 @@
     /* <![CDATA[*/
     $(document).ready(function() {
         var message = /*[[${msg}]]*/ 'default';
+        var result = /*[[${result}]]*/ 'default';
        alert(message);
+       if(result == 'F00' || result == 'F01') {
+           location.href='login';
+       }
     });
     /*]]>*/
 </script>

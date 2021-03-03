@@ -53,13 +53,16 @@ public class UserController {
             boolean matchPw = bCryptPasswordEncoder.matches(userInfoDto.getPassword(), checkPw);
             if(matchPw) {
                 mv.addObject("msg","로그인되었습니다.");
+                mv.addObject("result", "S00");
                 mv.setViewName("index");
             }else {
                 mv.addObject("msg","패스워드를 확인해주세요.");
+                mv.addObject("result", "F01");
                 mv.setViewName("index");
             }
         }else {
             mv.addObject("msg", "존재하는 아이디가 없습니다.");
+            mv.addObject("result", "F00");
             mv.setViewName("index");
         }
 
