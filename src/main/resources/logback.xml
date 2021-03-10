@@ -7,9 +7,9 @@
     </appender>
 
     <appender name="file_log" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>/app/log/ssp_api.log</file>
+        <file>log_file_name.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>/app/log/ssp_api.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <fileNamePattern>log_file_name.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
             <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
                 <!-- or whenever the file size reaches 100MB -->
                 <maxFileSize>100MB</maxFileSize>
