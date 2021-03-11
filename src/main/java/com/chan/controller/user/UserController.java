@@ -1,7 +1,7 @@
 package com.chan.controller.user;
 
 import com.chan.dto.UserInfoDto;
-import com.chan.service.UserService;
+import com.chan.service.user.UserService;
 import com.chan.common.StringUtil;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -54,7 +54,7 @@ public class UserController {
             if(matchPw) {
                 mv.addObject("msg","로그인되었습니다.");
                 mv.addObject("result", "S00");
-                mv.setViewName("index");
+                mv.setViewName("/product/productList");
             }else {
                 mv.addObject("msg","패스워드를 확인해주세요.");
                 mv.addObject("result", "F01");

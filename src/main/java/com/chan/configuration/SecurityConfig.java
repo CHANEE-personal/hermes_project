@@ -11,6 +11,7 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.stereotype.Component;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
+import org.springframework.web.cors.CorsUtils;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
 @Component
@@ -26,8 +27,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .and().csrf().disable()
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()
-                .authorizeRequests().anyRequest()
-                .permitAll();
+                .authorizeRequests().
+                requestMatchers(CorsUtils::isPreFlightRequest).permitAll();
     }
 
     @Override

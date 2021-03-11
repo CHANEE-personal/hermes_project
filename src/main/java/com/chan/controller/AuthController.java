@@ -1,11 +1,10 @@
 package com.chan.controller;
 
-import com.chan.service.UserService;
+import com.chan.service.user.UserService;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
 import com.chan.dto.UserInfoDto;
@@ -13,7 +12,6 @@ import com.chan.dto.UserInfoDto;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 
-import javax.transaction.Transactional;
 import java.util.List;
 import java.util.Map;
 

@@ -1,4 +1,4 @@
-package com.chan.mapper;
+package com.chan.mapper.user;
 
 import com.chan.dto.UserInfoDto;
 import org.apache.ibatis.annotations.Mapper;
@@ -6,7 +6,6 @@ import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 import java.util.Map;
 

@@ -1,4 +1,4 @@
-package com.chan.service;
+package com.chan.service.user;
 
 import com.chan.dto.UserInfoDto;
 

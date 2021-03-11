@@ -1,13 +1,12 @@
-package com.chan.service.impl;
+package com.chan.service.user.impl;
 
 import com.chan.dto.UserInfoDto;
-import com.chan.mapper.UserMapper;
-import com.chan.service.UserService;
+import com.chan.mapper.user.UserMapper;
+import com.chan.service.user.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 import java.util.Map;
 
