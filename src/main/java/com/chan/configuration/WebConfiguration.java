@@ -13,13 +13,15 @@ public class WebConfiguration implements WebMvcConfigurer {
     private static final String[] CLASSPATH_RESOURCE_LOCATIONS =
             {"classpath:/static/", "classpath:/public/", "classpath:/", "classpath:/resources/", "classpath:/META-INF/resources/"
             ,"classpath:/META-INF/resources/webjars/"};
+
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
-        .allowedOrigins("*")
-        .allowedMethods("GET","POST","OPTIONS")
-        .allowedHeaders("Content-Type", "Custom-Header")
-        .allowCredentials(false).maxAge(3000);
+                .allowedOriginPatterns("*")
+                .allowCredentials(true)
+                .allowedHeaders("*")
+                .allowedMethods("GET", "POST", "DELETE", "PUT", "PATCH")
+                .maxAge(3600);
     }
 
     @Override

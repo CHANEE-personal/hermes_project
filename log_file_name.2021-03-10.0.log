@@ -1,0 +1,138 @@
+14:48:00.152 {restartedMain} WARN  o.s.boot.StartupInfoLogger - InetAddress.getLocalHost().getHostName() took 5003 milliseconds to respond. Please verify your network configuration (macOS machines may need to add entries to /etc/hosts).
+14:48:05.167 {restartedMain} INFO  c.chan.HermesProjectApplication - Starting HermesProjectApplication using Java 1.8.0_282 on TJ03ui-MacBookPro.local with PID 6970 (/Users/tj03/IdeaProjects/hermes_project_1/target/classes started by tj03 in /Users/tj03/IdeaProjects/hermes_project_1)
+14:48:05.168 {restartedMain} INFO  c.chan.HermesProjectApplication - No active profile set, falling back to default profiles: default
+14:48:05.229 {restartedMain} INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+14:48:05.229 {restartedMain} INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+14:48:06.953 {restartedMain} WARN  o.m.s.m.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'userMapper' and 'com.chan.mapper.UserMapper' mapperInterface. Bean already defined with the same name!
+14:48:06.954 {restartedMain} WARN  o.m.s.m.ClassPathMapperScanner - No MyBatis mapper was found in '[com.chan.mapper]' package. Please check your configuration.
+14:48:07.233 {restartedMain} INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+14:48:07.235 {restartedMain} INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+14:48:07.255 {restartedMain} INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 0 JDBC repository interfaces.
+14:48:07.267 {restartedMain} INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+14:48:07.268 {restartedMain} INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+14:48:07.273 {restartedMain} INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
+14:48:07.822 {restartedMain} INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$60dc6c68] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+14:48:07.853 {restartedMain} INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+14:48:08.165 {restartedMain} INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 28080 (http)
+14:48:08.171 {restartedMain} INFO  o.a.c.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-28080"]
+14:48:08.172 {restartedMain} INFO  o.a.c.core.StandardService - Starting service [Tomcat]
+14:48:08.172 {restartedMain} INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+14:48:08.240 {restartedMain} INFO  o.a.c.c.C.[.[localhost].[/] - Initializing Spring embedded WebApplicationContext
+14:48:08.240 {restartedMain} INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3009 ms
+14:48:08.395 {restartedMain} INFO  c.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+14:48:09.064 {restartedMain} INFO  log4jdbc.log4j2 - 1. Connection opened. {executed in 656ms} 
+14:48:09.065 {restartedMain} INFO  log4jdbc.log4j2 - 1. Connection.new Connection returned 
+14:48:09.065 {restartedMain} INFO  log4jdbc.log4j2 - 1. Connection.getNetworkTimeout() returned 0
+14:48:09.071 {restartedMain} INFO  log4jdbc.log4j2 - 1. Connection.isReadOnly() returned false
+14:48:09.071 {restartedMain} INFO  log4jdbc.log4j2 - 1. Connection.getAutoCommit() returned true
+14:48:09.076 {restartedMain} INFO  log4jdbc.log4j2 - 1. Connection.isValid(1) returned true
+14:48:09.081 {restartedMain} INFO  log4jdbc.log4j2 - 1. Connection.getTransactionIsolation() returned 4
+14:48:09.083 {restartedMain} INFO  c.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+14:48:09.098 {restartedMain} INFO  log4jdbc.log4j2 - 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaData@207d741b
+14:48:09.120 {restartedMain} INFO  log4jdbc.log4j2 - 1. Connection.clearWarnings() returned 
+14:48:09.156 {restartedMain} INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+14:48:09.187 {restartedMain} INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.25.Final
+14:48:09.302 {HikariPool-1 connection adder} INFO  log4jdbc.log4j2 - 2. Connection opened. {executed in 111ms} 
+14:48:09.306 {HikariPool-1 connection adder} INFO  log4jdbc.log4j2 - 2. Connection.new Connection returned 
+14:48:09.313 {HikariPool-1 connection adder} INFO  log4jdbc.log4j2 - 2. Connection.isReadOnly() returned false
+14:48:09.314 {HikariPool-1 connection adder} INFO  log4jdbc.log4j2 - 2. Connection.getAutoCommit() returned true
+14:48:09.336 {restartedMain} INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+14:48:09.396 {restartedMain} INFO  log4jdbc.log4j2 - 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaData@aa4a070
+14:48:09.396 {HikariPool-1 connection adder} INFO  log4jdbc.log4j2 - 3. Connection opened. {executed in 81ms} 
+14:48:09.396 {HikariPool-1 connection adder} INFO  log4jdbc.log4j2 - 3. Connection.new Connection returned 
+14:48:09.397 {restartedMain} INFO  log4jdbc.log4j2 - 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaData@4f3d217b
+14:48:09.404 {HikariPool-1 connection adder} INFO  log4jdbc.log4j2 - 3. Connection.isReadOnly() returned false
+14:48:09.404 {HikariPool-1 connection adder} INFO  log4jdbc.log4j2 - 3. Connection.getAutoCommit() returned true
+14:48:09.405 {restartedMain} INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+14:48:09.414 {restartedMain} INFO  log4jdbc.log4j2 - 1. Connection.getCatalog() returned hermes
+14:48:09.432 {restartedMain} INFO  log4jdbc.log4j2 - 1. Connection.getSchema() returned null
+14:48:09.432 {restartedMain} INFO  log4jdbc.log4j2 - 1. Connection.getSchema() returned null
+14:48:09.440 {restartedMain} INFO  log4jdbc.log4j2 - 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaData@2c507e0e
+14:48:09.441 {restartedMain} INFO  log4jdbc.log4j2 - 1. Connection.createClob() returned com.mysql.cj.jdbc.Clob@7387ef0
+14:48:09.442 {restartedMain} INFO  log4jdbc.log4j2 - 1. Connection.clearWarnings() returned 
+14:48:09.479 {HikariPool-1 connection adder} INFO  log4jdbc.log4j2 - 4. Connection opened. {executed in 74ms} 
+14:48:09.481 {HikariPool-1 connection adder} INFO  log4jdbc.log4j2 - 4. Connection.new Connection returned 
+14:48:09.487 {HikariPool-1 connection adder} INFO  log4jdbc.log4j2 - 4. Connection.isReadOnly() returned false
+14:48:09.487 {HikariPool-1 connection adder} INFO  log4jdbc.log4j2 - 4. Connection.getAutoCommit() returned true
+14:48:09.525 {restartedMain} INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+14:48:09.532 {restartedMain} INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+14:48:09.547 {restartedMain} INFO  log4jdbc.log4j2 - 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaData@5d06cea5
+14:48:09.547 {restartedMain} INFO  log4jdbc.log4j2 - 1. Connection.clearWarnings() returned 
+14:48:09.570 {HikariPool-1 connection adder} INFO  log4jdbc.log4j2 - 5. Connection opened. {executed in 83ms} 
+14:48:09.573 {HikariPool-1 connection adder} INFO  log4jdbc.log4j2 - 5. Connection.new Connection returned 
+14:48:09.579 {HikariPool-1 connection adder} INFO  log4jdbc.log4j2 - 5. Connection.isReadOnly() returned false
+14:48:09.579 {HikariPool-1 connection adder} INFO  log4jdbc.log4j2 - 5. Connection.getAutoCommit() returned true
+14:48:09.724 {HikariPool-1 connection adder} INFO  log4jdbc.log4j2 - 6. Connection opened. {executed in 143ms} 
+14:48:09.726 {HikariPool-1 connection adder} INFO  log4jdbc.log4j2 - 6. Connection.new Connection returned 
+14:48:09.732 {HikariPool-1 connection adder} INFO  log4jdbc.log4j2 - 6. Connection.isReadOnly() returned false
+14:48:09.733 {HikariPool-1 connection adder} INFO  log4jdbc.log4j2 - 6. Connection.getAutoCommit() returned true
+14:48:09.814 {restartedMain} WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+14:48:09.818 {HikariPool-1 connection adder} INFO  log4jdbc.log4j2 - 7. Connection opened. {executed in 84ms} 
+14:48:09.818 {HikariPool-1 connection adder} INFO  log4jdbc.log4j2 - 7. Connection.new Connection returned 
+14:48:09.824 {HikariPool-1 connection adder} INFO  log4jdbc.log4j2 - 7. Connection.isReadOnly() returned false
+14:48:09.825 {HikariPool-1 connection adder} INFO  log4jdbc.log4j2 - 7. Connection.getAutoCommit() returned true
+14:48:09.917 {HikariPool-1 connection adder} INFO  log4jdbc.log4j2 - 8. Connection opened. {executed in 92ms} 
+14:48:09.918 {HikariPool-1 connection adder} INFO  log4jdbc.log4j2 - 8. Connection.new Connection returned 
+14:48:09.923 {HikariPool-1 connection adder} INFO  log4jdbc.log4j2 - 8. Connection.isReadOnly() returned false
+14:48:09.923 {HikariPool-1 connection adder} INFO  log4jdbc.log4j2 - 8. Connection.getAutoCommit() returned true
+14:48:09.999 {HikariPool-1 connection adder} INFO  log4jdbc.log4j2 - 9. Connection opened. {executed in 76ms} 
+14:48:10.000 {HikariPool-1 connection adder} INFO  log4jdbc.log4j2 - 9. Connection.new Connection returned 
+14:48:10.005 {HikariPool-1 connection adder} INFO  log4jdbc.log4j2 - 9. Connection.isReadOnly() returned false
+14:48:10.005 {HikariPool-1 connection adder} INFO  log4jdbc.log4j2 - 9. Connection.getAutoCommit() returned true
+14:48:10.086 {HikariPool-1 connection adder} INFO  log4jdbc.log4j2 - 10. Connection opened. {executed in 80ms} 
+14:48:10.086 {HikariPool-1 connection adder} INFO  log4jdbc.log4j2 - 10. Connection.new Connection returned 
+14:48:10.091 {HikariPool-1 connection adder} INFO  log4jdbc.log4j2 - 10. Connection.isReadOnly() returned false
+14:48:10.091 {HikariPool-1 connection adder} INFO  log4jdbc.log4j2 - 10. Connection.getAutoCommit() returned true
+14:48:10.403 {restartedMain} INFO  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: d0845394-9ee3-4dd2-abb3-547b2096a8fb
+
+14:48:10.444 {restartedMain} INFO  o.s.s.w.DefaultSecurityFilterChain - Will secure Ant [pattern='/v2/api-docs'] with []
+14:48:10.444 {restartedMain} INFO  o.s.s.w.DefaultSecurityFilterChain - Will secure Ant [pattern='/configuration/ui'] with []
+14:48:10.444 {restartedMain} INFO  o.s.s.w.DefaultSecurityFilterChain - Will secure Ant [pattern='/swagger-resources'] with []
+14:48:10.445 {restartedMain} INFO  o.s.s.w.DefaultSecurityFilterChain - Will secure Ant [pattern='/configuration/security'] with []
+14:48:10.445 {restartedMain} INFO  o.s.s.w.DefaultSecurityFilterChain - Will secure Ant [pattern='/swagger-ui.html'] with []
+14:48:10.445 {restartedMain} INFO  o.s.s.w.DefaultSecurityFilterChain - Will secure Ant [pattern='/webjars/**'] with []
+14:48:10.445 {restartedMain} INFO  o.s.s.w.DefaultSecurityFilterChain - Will secure Ant [pattern='/swagger/**'] with []
+14:48:10.462 {restartedMain} INFO  o.s.s.w.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5c76728f, org.springframework.security.web.context.SecurityContextPersistenceFilter@6dc84281, org.springframework.security.web.header.HeaderWriterFilter@74953e1, org.springframework.web.filter.CorsFilter@4cc19c54, org.springframework.security.web.authentication.logout.LogoutFilter@415992d0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@10fd822e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@652769ac, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@40cf7a05, org.springframework.security.web.session.SessionManagementFilter@49d9f45f, org.springframework.security.web.access.ExceptionTranslationFilter@707a41d9, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@30f9339e]
+14:48:10.485 {restartedMain} INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+14:48:10.615 {restartedMain} INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+14:48:10.656 {restartedMain} INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+14:48:10.674 {restartedMain} INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+14:48:10.733 {restartedMain} WARN  o.t.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+14:48:10.820 {restartedMain} INFO  log4jdbc.log4j2 - 1. Connection.isValid(5) returned true
+14:48:10.821 {restartedMain} INFO  log4jdbc.log4j2 - 1. Connection.getMetaData() returned com.mysql.cj.jdbc.DatabaseMetaData@65b36db
+14:48:10.823 {restartedMain} INFO  log4jdbc.log4j2 - 1. Connection.clearWarnings() returned 
+14:48:10.957 {restartedMain} INFO  o.a.c.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-28080"]
+14:48:10.979 {restartedMain} INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 28080 (http) with context path ''
+14:48:10.981 {restartedMain} INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+14:48:10.993 {restartedMain} INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+14:48:11.076 {restartedMain} INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+14:48:11.108 {http-nio-28080-exec-1} INFO  o.a.c.c.C.[.[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+14:48:11.109 {http-nio-28080-exec-1} INFO  o.s.w.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+14:48:11.115 {http-nio-28080-exec-1} INFO  o.s.w.servlet.DispatcherServlet - Completed initialization in 5 ms
+14:48:11.930 {restartedMain} INFO  c.chan.HermesProjectApplication - Started HermesProjectApplication in 32.433 seconds (JVM running for 43.466)
+14:57:59.378 {SpringContextShutdownHook} INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+14:57:59.382 {SpringContextShutdownHook} INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+14:57:59.393 {SpringContextShutdownHook} INFO  c.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+14:57:59.404 {HikariPool-1 connection closer} INFO  log4jdbc.log4j2 - 1. Connection closed. {executed in 6ms} 
+14:57:59.404 {HikariPool-1 connection closer} INFO  log4jdbc.log4j2 - 1. Connection.close() returned 
+14:57:59.408 {HikariPool-1 connection closer} INFO  log4jdbc.log4j2 - 2. Connection closed. {executed in 2ms} 
+14:57:59.409 {HikariPool-1 connection closer} INFO  log4jdbc.log4j2 - 2. Connection.close() returned 
+14:57:59.410 {HikariPool-1 connection closer} INFO  log4jdbc.log4j2 - 3. Connection closed. {executed in 1ms} 
+14:57:59.410 {HikariPool-1 connection closer} INFO  log4jdbc.log4j2 - 3. Connection.close() returned 
+14:57:59.411 {HikariPool-1 connection closer} INFO  log4jdbc.log4j2 - 4. Connection closed. {executed in 0ms} 
+14:57:59.411 {HikariPool-1 connection closer} INFO  log4jdbc.log4j2 - 4. Connection.close() returned 
+14:57:59.412 {HikariPool-1 connection closer} INFO  log4jdbc.log4j2 - 5. Connection closed. {executed in 0ms} 
+14:57:59.413 {HikariPool-1 connection closer} INFO  log4jdbc.log4j2 - 5. Connection.close() returned 
+14:57:59.414 {HikariPool-1 connection closer} INFO  log4jdbc.log4j2 - 6. Connection closed. {executed in 1ms} 
+14:57:59.414 {HikariPool-1 connection closer} INFO  log4jdbc.log4j2 - 6. Connection.close() returned 
+14:57:59.415 {HikariPool-1 connection closer} INFO  log4jdbc.log4j2 - 7. Connection closed. {executed in 1ms} 
+14:57:59.415 {HikariPool-1 connection closer} INFO  log4jdbc.log4j2 - 7. Connection.close() returned 
+14:57:59.417 {HikariPool-1 connection closer} INFO  log4jdbc.log4j2 - 8. Connection closed. {executed in 1ms} 
+14:57:59.417 {HikariPool-1 connection closer} INFO  log4jdbc.log4j2 - 8. Connection.close() returned 
+14:57:59.418 {HikariPool-1 connection closer} INFO  log4jdbc.log4j2 - 9. Connection closed. {executed in 1ms} 
+14:57:59.418 {HikariPool-1 connection closer} INFO  log4jdbc.log4j2 - 9. Connection.close() returned 
+14:57:59.420 {HikariPool-1 connection closer} INFO  log4jdbc.log4j2 - 10. Connection closed. {executed in 1ms} 
+14:57:59.420 {HikariPool-1 connection closer} INFO  log4jdbc.log4j2 - 10. Connection.close() returned 
+14:57:59.420 {SpringContextShutdownHook} INFO  c.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

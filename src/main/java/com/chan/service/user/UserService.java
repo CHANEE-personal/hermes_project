@@ -2,7 +2,6 @@ package com.chan.service.user;
 
 import com.chan.dto.UserInfoDto;
 
-import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 import java.util.Map;
 

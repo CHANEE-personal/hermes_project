@@ -1,7 +1,7 @@
 package com.chan.service.user.impl;
 
 import com.chan.dto.UserInfoDto;
-import com.chan.mapper.user.UserMapper;
+import com.chan.mapper.UserMapper;
 import com.chan.service.user.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;

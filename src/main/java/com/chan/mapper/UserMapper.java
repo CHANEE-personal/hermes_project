@@ -1,4 +1,4 @@
-package com.chan.mapper.user;
+package com.chan.mapper;
 
 import com.chan.dto.UserInfoDto;
 import org.apache.ibatis.annotations.Mapper;

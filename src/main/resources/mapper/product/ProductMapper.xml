@@ -3,6 +3,7 @@
 <mapper namespace="com.chan.mapper.ProductMapper">
 
     <select id="getProductList" resultType="hashMap">
-
+        SELECT *
+        FROM hermes_product
     </select>
 </mapper>
