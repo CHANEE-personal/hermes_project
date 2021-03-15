@@ -1,9 +1,7 @@
 package com.chan.controller.user;
 
 import com.chan.configuration.jwt.JwtTokenUtil;
-import com.chan.dto.AuthenticationResponse;
 import com.chan.dto.UserInfoDto;
-import com.chan.service.jwt.JwtService;
 import com.chan.service.user.UserService;
 import com.chan.common.StringUtil;
 import lombok.RequiredArgsConstructor;
@@ -14,7 +12,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 @RequiredArgsConstructor
-@RequestMapping(value="/user", method = RequestMethod.POST)
+@RequestMapping(value="/user")
 public class UserController {
 
     private final UserService userService;
@@ -57,10 +55,6 @@ public class UserController {
             // 패스워드 체크
             boolean matchPw = bCryptPasswordEncoder.matches(userInfoDto.getPassword(), checkPw);
             if(matchPw) {
-
-                String jwt = jwtTokenUtil.generateToken(userInfoDto.getId());
-
-                new AuthenticationResponse(jwt);
 
                 mv.addObject("msg","로그인되었습니다.");
                 mv.addObject("result", "S00");
