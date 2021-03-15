@@ -11,7 +11,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 @RequiredArgsConstructor
-@RequestMapping(value="/user")
+@RequestMapping(value="/user", method = RequestMethod.POST)
 public class UserController {
 
     private final UserService userService;

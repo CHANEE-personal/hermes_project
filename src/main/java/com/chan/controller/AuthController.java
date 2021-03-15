@@ -15,7 +15,7 @@ import io.swagger.annotations.ApiOperation;
 import java.util.List;
 import java.util.Map;
 
-@RequestMapping("/api/auth")
+@RequestMapping(value = "/api/auth", method = {RequestMethod.POST, RequestMethod.GET})
 @RestController
 @RequiredArgsConstructor
 @Api(tags="인증 API")
@@ -42,7 +42,7 @@ public class AuthController {
 	}
 
 	@ApiOperation(value="회원 등록", notes = "회원을 등록한다.")
-	@GetMapping(value="/signup")
+	@PostMapping(value="/signup")
 	public void insertUserInfo(UserInfoDto userInfoDto) throws Exception {
 
 		//패스워드 암호화
