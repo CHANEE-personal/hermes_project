@@ -37,20 +37,5 @@ public class UserInfoDto {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-
-/*public UserInfo toEntity() {
-		return UserInfo.builder()
-				.id(id)
-				.email(email)
-				.password(password)
-				.build();
-	}
-
-	@Builder
-	public UserInfoDto(Long id, String email, String password) {
-		this.id = id;
-		this.email = email;
-		this.password = password;
-	}*/
 		
 }
