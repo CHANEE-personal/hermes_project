@@ -5,6 +5,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -27,7 +28,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @Profile(value = {"swagger"})
 @Configuration
 @EnableSwagger2
-public class swaggerConfiguration extends WebMvcConfigurationSupport{			
+public class swaggerConfiguration extends WebMvcConfigurationSupport{
 	
 	@Bean
 	public Docket api() {
