@@ -25,6 +25,6 @@ public class ProductServiceImpl implements ProductService {
      * @modifyed :
      **/
     public List<Map<String, Object>> getProductList(HttpServletRequest request) throws Exception {
-        return productMapper.getProductList();
+        return productMapper.getProductList(request);
     }
 }
