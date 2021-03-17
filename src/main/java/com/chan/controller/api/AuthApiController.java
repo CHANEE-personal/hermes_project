@@ -17,7 +17,7 @@ import io.swagger.annotations.ApiOperation;
 import java.util.List;
 import java.util.Map;
 
-@RequestMapping(value = "/api/auth", method = {RequestMethod.POST, RequestMethod.GET})
+@RequestMapping(value = "/api/auth")
 @RestController
 @RequiredArgsConstructor
 @Api(tags="회원관련 API")
@@ -32,7 +32,7 @@ public class AuthApiController {
     }
 
     @ApiOperation(value="회원 로그인", notes="회원을 로그인한다.")
-    @GetMapping(value="/signin")
+    @PostMapping(value="/signin")
     @ApiResponses({
             @ApiResponse(code = 200, message = "로그인 성공"),
             @ApiResponse(code = 400, message = "잘못된 접근"),
