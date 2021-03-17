@@ -28,23 +28,30 @@ public class ProductApiController {
         return productService.getProductList(request);
     }
 
-    @ApiOperation(value="상품삭제", notes="상품을 삭제한다.")
-    @DeleteMapping(value="/{item}")
-    public JSON deleteProduct(HttpServletRequest request) throws Exception {
-        JSONObject json = new JSONObject();
-
-        return json;
-    }
-
-
     @ApiOperation(value="상품등록", notes="상품을 등록한다.")
-    @PutMapping(value="/{item}")
-    public JSON insertProduct(HttpServletRequest request) throws Exception {
-        JSONObject json = new JSONObject();
+    @PostMapping(value="/{item}")
+    public String insertProduct(HttpServletRequest request) throws Exception {
 
         productService.insertProduct(request);
 
+        return "1";
+    }
+
+    @ApiOperation(value="상품수정", notes="상품을 수정한다.")
+    @PatchMapping(value="/{item}")
+    public JSON updateProduct(HttpServletRequest request, @PathVariable("item") String item) throws Exception {
+        JSONObject json = new JSONObject();
+
+        productService.updateProduct(request);
+
         return json;
     }
 
+    @ApiOperation(value="상품삭제", notes="상품을 삭제한다.")
+    @DeleteMapping(value="/{item}")
+    public JSON deleteProduct(HttpServletRequest request, @PathVariable("item") String item) throws Exception {
+        JSONObject json = new JSONObject();
+
+        return json;
+    }
 }

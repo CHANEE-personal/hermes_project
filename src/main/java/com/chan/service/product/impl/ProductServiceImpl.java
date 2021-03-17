@@ -39,4 +39,16 @@ public class ProductServiceImpl implements ProductService {
     public String insertProduct(HttpServletRequest request) throws Exception {
         return productMapper.insertProduct(request);
     }
+
+    /**
+    * @package : com.chan.service.product.impl
+    * @method : updateProduct
+    * @date : 17/03/2021 5:17 오후
+    * @author : chanee
+    * @version : 1.0.0
+    * @modifyed :
+    **/
+    public String updateProduct(HttpServletRequest request) throws Exception {
+        return productMapper.updateProduct(request);
+    }
 }

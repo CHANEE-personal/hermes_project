@@ -22,4 +22,14 @@ public interface ProductMapper {
     * @modifyed :
     **/
     public String insertProduct(HttpServletRequest request) throws Exception;
+
+    /**
+    * @package : com.chan.mapper.product
+    * @method : updateProduct
+    * @date : 17/03/2021 5:18 오후
+    * @author : chanee
+    * @version : 1.0.0
+    * @modifyed :
+    **/
+    public String updateProduct(HttpServletRequest request) throws Exception;
 }

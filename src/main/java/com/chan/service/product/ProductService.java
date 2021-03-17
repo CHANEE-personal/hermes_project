@@ -29,4 +29,14 @@ public interface ProductService {
     * @modifyed :
     **/
     public String insertProduct(HttpServletRequest request) throws Exception;
+
+    /**
+    * @package : com.chan.service.product
+    * @method : updateProduct
+    * @date : 17/03/2021 5:12 오후
+    * @author : chanee
+    * @version : 1.0.0
+    * @modifyed :
+    **/
+    public String updateProduct(HttpServletRequest request) throws Exception;
 }
