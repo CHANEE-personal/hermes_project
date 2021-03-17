@@ -22,7 +22,7 @@ public class ProductServiceImpl implements ProductService {
      * @date : 2021-03-11 오후 3:36
      * @author : chanee
      * @version : 1.0.0
-     * @modifyed :
+     * @modifyed : 상품리스트 조회
      **/
     public List<Map<String, Object>> getProductList(HttpServletRequest request) throws Exception {
         return productMapper.getProductList(request);
@@ -34,7 +34,7 @@ public class ProductServiceImpl implements ProductService {
     * @date : 17/03/2021 2:19 오후
     * @author : chanee
     * @version : 1.0.0
-    * @modifyed :
+    * @modifyed : 상품 등록
     **/
     public String insertProduct(HttpServletRequest request) throws Exception {
         return productMapper.insertProduct(request);
@@ -46,7 +46,7 @@ public class ProductServiceImpl implements ProductService {
     * @date : 17/03/2021 5:17 오후
     * @author : chanee
     * @version : 1.0.0
-    * @modifyed :
+    * @modifyed : 상품 수정
     **/
     public String updateProduct(HttpServletRequest request) throws Exception {
         return productMapper.updateProduct(request);
