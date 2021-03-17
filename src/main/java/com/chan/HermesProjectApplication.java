@@ -67,8 +67,8 @@ public class HermesProjectApplication {
 
 	private ApiInfo getApiInfo() {
 		return new ApiInfoBuilder()
-				.title("[CHAN] API")
-				.description("[CHAN] API")
+				.title("[Hermes] API")
+				.description("[Hermes] API")
 				.version("1.0")
 				.build();
 	}
