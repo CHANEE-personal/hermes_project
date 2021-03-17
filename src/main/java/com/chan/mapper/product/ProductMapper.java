@@ -12,4 +12,14 @@ import java.util.Map;
 public interface ProductMapper {
 
     public List<Map<String, Object>> getProductList(HttpServletRequest request) throws Exception;
+
+    /**
+    * @package : com.chan.mapper.product
+    * @method : insertProduct
+    * @date : 17/03/2021 2:20 오후
+    * @author : chanee
+    * @version : 1.0.0
+    * @modifyed :
+    **/
+    public String insertProduct(HttpServletRequest request) throws Exception;
 }

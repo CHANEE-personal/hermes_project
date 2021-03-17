@@ -45,17 +45,12 @@ public class AuthApiController {
 
     @ApiOperation(value="회원 등록", notes = "회원을 등록한다.")
     @PostMapping(value="/signup")
-    public JSON insertUserInfo(@RequestBody UserInfoDto userInfoDto) throws Exception {
-
-        JSONObject jsonObject = new JSONObject();
-        jsonObject.put("id",userInfoDto.getId());
+    public void insertUserInfo(UserInfoDto userInfoDto) throws Exception {
 
         //패스워드 암호화
         BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
         userInfoDto.setPassword(passwordEncoder.encode(userInfoDto.getPassword()));
 
         userService.insertUserInfo(userInfoDto);
-
-        return jsonObject;
     }
 }

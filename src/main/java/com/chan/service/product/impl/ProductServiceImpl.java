@@ -27,4 +27,16 @@ public class ProductServiceImpl implements ProductService {
     public List<Map<String, Object>> getProductList(HttpServletRequest request) throws Exception {
         return productMapper.getProductList(request);
     }
+
+    /**
+    * @package : com.chan.service.product.impl
+    * @method : insertProduct
+    * @date : 17/03/2021 2:19 오후
+    * @author : chanee
+    * @version : 1.0.0
+    * @modifyed :
+    **/
+    public String insertProduct(HttpServletRequest request) throws Exception {
+        return productMapper.insertProduct(request);
+    }
 }

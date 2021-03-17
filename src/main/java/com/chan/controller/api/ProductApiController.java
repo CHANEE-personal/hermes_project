@@ -36,6 +36,8 @@ public class ProductApiController {
     public JSON insertProduct(HttpServletRequest request) throws Exception {
         JSONObject json = new JSONObject();
 
+        productService.insertProduct(request);
+
         return json;
     }
 }

@@ -5,6 +5,8 @@ import com.chan.dto.UserInfoDto;
 import com.chan.service.user.UserService;
 import com.chan.common.StringUtil;
 import lombok.RequiredArgsConstructor;
+import net.sf.json.JSON;
+import net.sf.json.JSONObject;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -82,14 +84,25 @@ public class UserController {
      * @modifyed :
      **/
     @PostMapping("/register")
-    public String insertUserInfo(UserInfoDto userInfoDto) throws Exception
+    public JSON insertUserInfo(@RequestBody UserInfoDto userInfoDto) throws Exception
     {
+        JSONObject jsonObject = new JSONObject();
+
+        //패스워드 암호화
         BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
         userInfoDto.setPassword(passwordEncoder.encode(userInfoDto.getPassword()));
-        if(StringUtil.getInt(userService.insertUserInfo(userInfoDto))>0) {
-            return "index";
-        }else {
-            return "index";
+
+        if(userService.getUserCount(userInfoDto.getId(), userInfoDto.getPassword()) == 0) {
+            if(userService.insertUserInfo(userInfoDto)>0) {
+                jsonObject.put("result","S00");
+                jsonObject.put("msg","회원가입을 축하합니다.");
+                jsonObject.put("id",userInfoDto.getId());
+            }
+        } else {
+            jsonObject.put("result","F00");
+            jsonObject.put("msg","이미 존재하는 아이디입니다.");
         }
+
+        return jsonObject;
     }
 }
